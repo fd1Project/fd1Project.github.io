@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+    <title>project</title>
+</head>
+
+<body>
+    <div class="page-container">
+        <section>
+            <header class="header about-header">
+                <div class="header__logo about-header__logo"><img src="img/logo.svg" alt=""></div>
+                <nav class="header__menu about-header__menu">
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="home.html" target="_parent" class="header__link">home</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="about.html" target="_parent" class="header__link">about</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="contact.html" target="_parent" class="header__link">contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        </section>
+        <section class="project">
+            <div class="project-grid">
+                <div class="project-grid__description">
+                    <div class="project-grid__text-content-wrapper">
+                        <div class="project-grid__title">Light Breakfast</div>
+                        <div class="project-grid__subtitle-1">Light his can't a creeping. Be, bring blessed night. Replenish blessed creature good. Saw earth every creepeth lights day, divided abundantly form. In. Said given lights. Sixth the male. Upon their multiply. Kind beast. Him tree
+                            upon.
+                        </div>
+                        <div class="project-grid__subtitle-2">Cattle. Dominion day herb she'd creeping divide darkness. Which. Subdue had.One you’re fruit subdue saw subdue appear it. Void female may grass and light, gathering stars won’t don’t set void man moved won’t over won’t good that
+                            said together.
+                        </div>
+                        <div class="project-grid__info-client"><span>Client:</span> Alina Malina</div>
+                        <div class="project-grid__info-data"><span>Date:</span> 10.04.2021</div>
+                        <div class="project-grid__info-share"><span>Share:</span> IT-Academy | ОЦ ПВТ(1)</div>
+                    </div>
+                </div>
+                <div class="project-grid__img"><img src="img/project-pic1.jpg" alt=""></div>
+            </div>
+            <div class="project__slider">
+                <div class="project__previous-slide">
+                    <a href="#" class="project__slider-links" onclick="openPreviousProject()"><span><img src="img/pe-7s-angle-left.png" alt=""></span> previous project</a>
+                </div>
+                <div class="project__open-gallery">
+                    <a href="#" class="project__slider-links" onclick="openHome()"><img src="img/open-gal-btn.jpg" alt=""></a>
+                </div>
+                <div class="project__next-slide">
+                    <a href="#" class="project__slider-links" onclick="opencurrentProject()">next project <span><img src="img/pe-7s-angle-right.png" alt=""></span></a>
+                </div>
+            </div>
+        </section>
+        <section class="main-footer">
+            <footer class="footer">
+                <div class="footer__copyright-inc">
+                    <div class="footer__inc">Someone`s Design, Inc.</div>
+                    <div class="footer__copyright">&copy; 2021 Dan. All rights reserved. Designed by someone.</div>
+                </div>
+                <div class="footer__contacts">
+                    <div>d.srednyakov@gmail.com</div>
+                    <div>+80 447 930 554</div>
+                </div>
+                <nav class="footer__nav">
+                    <div class="footer__nav-part1">
+                        <a href="project.html" class="footer__nav-links">Projects</a>
+                        <a href="about.html" target="_parent" class="footer__nav-links">About</a>
+                        <a href="project.html" target="_parent" class="footer__nav-links">Services</a>
+                        <a href="home.html" class="footer__nav-links">Carreer</a>
+                    </div>
+                    <div class="footer__nav-part2">
+                        <a href="index.html" class="footer__nav-links">News</a>
+                        <a href="project.html" class="footer__nav-links">Events</a>
+                        <a href="contact.html" class="footer__nav-links">Contact</a>
+                        <a href="https://www.reedglobal.com/disciplines/legal" target="_blank" class="footer__nav-links">Legals</a>
+                    </div>
+                </nav>
+
+                <div class="footer__social-networks">
+                    <a href="https://www.facebook.com/" target="_blank" class="footer__nav-links">Facebook</a>
+                    <a href="https://twitter.com/" target="_blank" class="footer__nav-links">Twitter</a>
+                    <a href="https://www.instagram.com/" target="_blank" class="footer__nav-links">Instagram</a>
+                    <a href="https://dribbble.com/" target="_blank" class="footer__nav-links">Dribbble</a></div>
+            </footer>
+        </section>
+    </div>
+    <script type="text/javascript">
+        var currentProject = 1;
+        var projectInfo = [{
+            title: document.getElementsByClassName("project-grid__title")[0],
+            subtitle1: document.getElementsByClassName("project-grid__subtitle-1")[0],
+            subtitle2: document.getElementsByClassName("project-grid__subtitle-2")[0],
+            img: document.getElementsByClassName("project-grid__img")[0],
+            name: document.getElementsByClassName("project-grid__info-client")[0],
+            data: document.getElementsByClassName("project-grid__info-data")[0],
+            share: document.getElementsByClassName("project-grid__info-share")[0]
+        }, {
+            title: "Light Breakfast",
+            subtitle1: "Light his can't a creeping. Be, bring blessed night. Replenish blessed creature good. Saw earth every creepeth lights day, divided abundantly form. In. Said given lights. Sixth the male. Upon their multiply. Kind beast. Him tree upon.",
+            subtitle2: "Cattle. Dominion day herb she'd creeping divide darkness. Which. Subdue had.One you’re fruit subdue saw subdue appear it. Void female may grass and light, gathering stars won’t don’t set void man moved won’t over won’t good that said together.",
+            img: "<img src=\"img/project-pic1.jpg\" alt=\"\">",
+            name: "<span>Client:</span> Alina Malina",
+            data: "<span>Date:</span> 10.04.2021",
+            share: "<span>Share:</span> IT-Academy | ОЦ ПВТ(1)"
+        }, {
+            title: "Acai Berry Parfait Recipe",
+            subtitle1: "Acai bowls have become an obsession in our house. They are crazy easy to whip up, are packed with nutrients, and are crazy refreshing! Acai berries are a super food and are filled with antioxidants. Some studies show it can help with weight loss and has cancer fighting properties.",
+            subtitle2: "This is a perfect breakfast during the warm summer months, although I love eating them year round! It is also a perfect pregnancy breakfast. It is very palatable, refreshing, and gives a nice punch of nutrients. You can also add fresh spinach if you want to give this breakfast even more nutrients!",
+            img: "<img src=\"img/Acai-Parfait-project.webp\" alt=\"\">",
+            name: "<span>Client:</span> Danila Sredniakov",
+            data: "<span>Date:</span> 17.04.2021",
+            share: "<span>Share:</span> IT-Academy | ОЦ ПВТ(2)"
+        }, {
+            title: "Cinnamon and Date Chia Pudding",
+            subtitle1: "Chia seeds are an amazing base for pudding because they swell when hydrated. Combine chia seeds with almond milk, cashew milk, or coconut milk for a naturally creamy, healthy pudding you can flavor in so many different ways.",
+            subtitle2: "Reminder: Always make sure your work surfaces, utensils, pans and tools are free of gluten. Always read product labels—not all brands are created equal. Manufacturers can change product formulations without notice. When in doubt, do not buy or use a product before contacting the manufacturer for verification that the product is free of gluten.",
+            img: "<img src=\"img/cinnamon-and-date-chia-pudding-project.webp\" alt=\"\">",
+            name: "<span>Client:</span> Iryna Kaliuta",
+            data: "<span>Date:</span> 19.04.2021",
+            share: "<span>Share:</span> IT-Academy | ОЦ ПВТ(3)"
+        }]
+        let opencurrentProject = () => {
+            currentProject++;
+            currentProject > 3 ? currentProject = 1 : currentProject;
+            for (i in projectInfo[0])
+                projectInfo[0][i].innerHTML = projectInfo[currentProject][i];
+        };
+
+        let openPreviousProject = () => {
+            currentProject--;
+            currentProject == 0 ? currentProject = 3 : currentProject;
+            for (i in projectInfo[0])
+                projectInfo[0][i].innerHTML = projectInfo[currentProject][i];
+        };
+
+        let openHome = () => {
+            window.open("home.html", "_parent")
+        }
+
+        let sliderPagination = $(".project__slider-links");
+        sliderPagination.on('click', (e) => {
+            e.preventDefault();
+        })
+    </script>
+
+</body>
+
+</html>
